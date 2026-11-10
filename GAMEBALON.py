@@ -312,6 +312,14 @@ class Game(tk.Frame):
             self.score += points
             self.update_score_text()
 
+
+if __name__ == '__main__':
+    root = tk.Tk()
+    root.title('Hello, Pemainku!')
+    game = Game(root)
+    game.mainloop()
+
+
 # Kelas dasar untuk semua benda di game (bola, paddle, brick)
 class GameObject(object):
     def __init__(self, canvas, item):
@@ -558,10 +566,3 @@ class Game(tk.Frame):
         if points > 0:
             self.score += points
             self.update_score_text()
-
-
-if __name__ == '__main__':
-    root = tk.Tk()
-    root.title('Hello, Pemainku!')
-    game = Game(root)
-    game.mainloop()
