@@ -6,12 +6,7 @@ try:
     import winsound
 except ImportError:
     winsound = None
-#Import musik
-try:
-    import winsound
-except ImportError:
-    winsound = None
-    
+
 # Kelas dasar untuk semua benda di game (bola, paddle, brick)
 class GameObject(object):
     def __init__(self, canvas, item):
@@ -197,8 +192,8 @@ class Game(tk.Frame):
             self.add_brick(x + 19, 101, 1)
             self.add_brick(x + 19, 147, 1)
 
-        self.hud = None        # teks nyawa
-        self.score_hud = None  # teks skor
+        self.hud = None        # nyawa
+        self.score_hud = None  # skor
         self.update_score_text()
         self.setup_game()
         self.canvas.focus_set()
