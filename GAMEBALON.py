@@ -31,7 +31,7 @@ class Ball(GameObject):
         self.radius = 10
         self.direction = [1, -1]
         self.speed = 2  # kecepatan bola (makin kecil = makin lambat)
-        # Warna bola diganti jadi pink
+        # Warna bola
         item = canvas.create_oval(x-self.radius, y-self.radius,
                                   x+self.radius, y+self.radius,
                                   fill='#ff69b4')
@@ -312,13 +312,6 @@ class Game(tk.Frame):
             self.score += points
             self.update_score_text()
 
-
-if __name__ == '__main__':
-    root = tk.Tk()
-    root.title('Hello, Jarvis!')
-    game = Game(root)
-    game.mainloop()
-
 # Kelas dasar untuk semua benda di game (bola, paddle, brick)
 class GameObject(object):
     def __init__(self, canvas, item):
@@ -569,6 +562,6 @@ class Game(tk.Frame):
 
 if __name__ == '__main__':
     root = tk.Tk()
-    root.title('Hello, Jarvis!')
+    root.title('Hello, Pemainku!')
     game = Game(root)
     game.mainloop()
